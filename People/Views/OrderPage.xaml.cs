@@ -13,7 +13,9 @@ namespace People.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class OrderPage : ContentPage
     {
-        //private OrderRepository _data;
+        private Order _data;
+        
+
         public OrderPage()
         {
             InitializeComponent();
@@ -29,12 +31,10 @@ namespace People.Views
 
         public void OnGetButtonClicked(object sender, EventArgs args)
         {
+            
             statusMessage.Text = "";
 
-            List<Order> people = App.PersonRepo.GetAllOrder();
-            orderList.ItemsSource = people;
-
-            //Navigation.PushAsync(new ViewOrderPage());
+            Navigation.PushAsync(new ViewOrderPage(_data));
         }
     }
 }

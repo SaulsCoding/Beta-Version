@@ -20,10 +20,13 @@ namespace People
 
             PersonRepo = new OrderRepository(dbPath);
             //MainPage = new MainPage(new OrderPage());
-            var orders = new NavigationPage(new OrderPage());
-            //peoples.BarBackgroundColor = Color.FromHex("000000");
 
-            MainPage = orders;
+
+
+            var navPage = new NavigationPage(new OrderPage());
+            navPage.BarBackgroundColor = Color.FromHex("000000");
+
+            MainPage = navPage;
         }
 
         protected override void OnStart()

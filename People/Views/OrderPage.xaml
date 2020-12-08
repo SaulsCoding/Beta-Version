@@ -2,13 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="People.Views.OrderPage"
-             Background="Red">
+             Background="AliceBlue"
+             Title="T-Shirt Order App">
     <ContentPage.Content>
         <StackLayout>
-            <Frame BackgroundColor='Red' CornerRadius="0">
+            <Frame BackgroundColor='OrangeRed' CornerRadius="0" Margin="0,-10,0,0">
                 <Label Text="Ordering App" HorizontalTextAlignment="Center" FontFamily="Bold" TextColor="White" FontSize="36"/>
             </Frame>
-            <Frame BackgroundColor="BlanchedAlmond" Margin="20,0,20,0" CornerRadius="10">
+            <Frame BackgroundColor="BlanchedAlmond" Margin="20,0,20,0" CornerRadius="10" HasShadow="True">
                 <StackLayout>
                     <Entry x:Name="newPerson"
                         Placeholder="Enter Name" Margin="50,0,50,0" />
@@ -29,48 +30,12 @@
                 </StackLayout>
             </Frame>
             
-            
                 <Button Text="Add Order"
-           Clicked="OnNewButtonClicked" CornerRadius="50" BackgroundColor="Crimson" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
-            
-
+           Clicked="OnNewButtonClicked" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
             
                 <Button Text="Get All Orders"
-           Clicked="OnGetButtonClicked" CornerRadius="50" BackgroundColor="Crimson" TextColor="White" Padding="25" Margin="120,-7,120,0" BorderWidth="2" BorderColor="LightBlue"/>
+           Clicked="OnGetButtonClicked" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
            
-            
-
-            <ListView x:Name="orderList">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell Height="30">
-                            <StackLayout Padding="5">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"></RowDefinition>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-
-                                    <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="0" />
-                                    <Label Text="{Binding Gender}" Grid.Row="0" Grid.Column="1"/>
-                                    <Label Text="{Binding TShirt_Size}" Grid.Row="0" Grid.Column="2"/>
-                                    <Label Text="{Binding Date_of_Order}" Grid.Row="0" Grid.Column="3"/>
-                                    <Label Text="{Binding TShirt_Color}" Grid.Row="0" Grid.Column="4"/>
-                                    <Label Text="{Binding Shipping_Address}" Grid.Row="0" Grid.Column="5"/>
-                                </Grid>
-
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
             <Label x:Name="statusMessage"/>
         </StackLayout>
     </ContentPage.Content>

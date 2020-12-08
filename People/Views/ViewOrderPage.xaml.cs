@@ -1,4 +1,5 @@
-﻿using System;
+﻿using People.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,13 +14,14 @@ namespace People.Views
     public partial class ViewOrderPage : ContentPage
     {
 
-        public ViewOrderPage()
+        public ViewOrderPage(Order _data)
         {
             InitializeComponent();
 
-           // Title = "Order List";
-
-            //BindingContext = _data;
+           Title = "Order List";
+            List<Order> people = App.PersonRepo.GetAllOrder();
+            orderList.ItemsSource = people;
+            BindingContext = _data;
         }
     }
 }
