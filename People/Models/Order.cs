@@ -5,7 +5,7 @@ using System.Text;
 
 namespace People.Models
 {
-    [Table("people")]
+    [Table("tshirtorder")]
     public class Order
     {
 

@@ -13,12 +13,12 @@ namespace People
     {
         string dbPath => FileAccessHelper.GetLocalFilePath("order.db3");
 
-        public static OrderRepository PersonRepo { get; private set; }
+        public static OrderRepository OrderRepo { get; private set; }
         public App()
         {
             InitializeComponent();
 
-            PersonRepo = new OrderRepository(dbPath);
+            OrderRepo = new OrderRepository(dbPath);
             //MainPage = new MainPage(new OrderPage());
 
 

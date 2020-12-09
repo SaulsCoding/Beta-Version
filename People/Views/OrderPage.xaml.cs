@@ -25,8 +25,8 @@ namespace People.Views
         {
             statusMessage.Text = "";
 
-            App.PersonRepo.AddNewOrder(newPerson.Text, newGender.Text, newTShirtSize.Text, newDateOfOrder.Text, newTShirt_Color.Text, newShipping_Address.Text);
-            statusMessage.Text = App.PersonRepo.StatusMessage;
+            App.OrderRepo.AddNewOrder(newName.Text, newGender.Text, newTShirtSize.Text, newDateOfOrder.Text, newTShirt_Color.Text, newShipping_Address.Text);
+            statusMessage.Text = App.OrderRepo.StatusMessage;
         }
 
         public void OnGetButtonClicked(object sender, EventArgs args)

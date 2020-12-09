@@ -19,8 +19,8 @@ namespace People.Views
             InitializeComponent();
 
            Title = "Order List";
-            List<Order> people = App.PersonRepo.GetAllOrder();
-            orderList.ItemsSource = people;
+            List<Order> tshirtorder = App.OrderRepo.GetAllOrder();
+            orderList.ItemsSource = tshirtorder;
             BindingContext = _data;
         }
     }

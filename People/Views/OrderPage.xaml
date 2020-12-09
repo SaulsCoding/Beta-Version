@@ -11,7 +11,7 @@
             </Frame>
             <Frame BackgroundColor="BlanchedAlmond" Margin="20,0,20,0" CornerRadius="10" HasShadow="True">
                 <StackLayout>
-                    <Entry x:Name="newPerson"
+                    <Entry x:Name="newName"
                         Placeholder="Enter Name" Margin="50,0,50,0" />
                     <Entry x:Name="newGender"
                         Placeholder="Enter Gender" Margin="50,0,50,0" />
@@ -31,10 +31,10 @@
             </Frame>
             
                 <Button Text="Add Order"
-           Clicked="OnNewButtonClicked" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
+                    Clicked="OnNewButtonClicked" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
             
                 <Button Text="Get All Orders"
-           Clicked="OnGetButtonClicked" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
+                    Clicked="OnGetButtonClicked" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
            
             <Label x:Name="statusMessage"/>
         </StackLayout>
