@@ -31,10 +31,10 @@
             </Frame>
             
                 <Button Text="Add Order"
-                    Clicked="OnNewButtonClicked" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
+                    Clicked="AddBtn" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
             
                 <Button Text="Get All Orders"
-                    Clicked="OnGetButtonClicked" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
+                    Clicked="GetBtn" CornerRadius="50" BackgroundColor="OrangeRed" TextColor="White" Padding="25" Margin="120,0,120,0" BorderWidth="2" BorderColor="LightBlue"/>
            
             <Label x:Name="statusMessage"/>
         </StackLayout>

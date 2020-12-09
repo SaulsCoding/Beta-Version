@@ -21,7 +21,7 @@ namespace People.Views
             InitializeComponent();
         }
 
-        public void OnNewButtonClicked(object sender, EventArgs args)
+        public void AddBtn(object sender, EventArgs args)
         {
             statusMessage.Text = "";
 
@@ -29,7 +29,7 @@ namespace People.Views
             statusMessage.Text = App.OrderRepo.StatusMessage;
         }
 
-        public void OnGetButtonClicked(object sender, EventArgs args)
+        public void GetBtn(object sender, EventArgs args)
         {
             
             statusMessage.Text = "";
